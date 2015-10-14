@@ -24,8 +24,17 @@ function eulerOne(){
 function eulerTwo(){
 	//sum of all even valued fibonacci number with a value that doesn't exceed four mill.
 	var result = 0;
-
-	
-	
+	var number = 0;
+	var nrOne = 1;
+	var nrTwo = 1;
+	while(number < 4*10^6){
+		number = nrOne + nrTwo;
+		if(number % 2 == 0) {
+			result += number;
+		}
+		nrOne = nrTwo;
+		nrTwo = number;
+	}
+	console.log("The result is: " + number);
 	document.getElementById("answer2").value = result;
 }
