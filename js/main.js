@@ -17,5 +17,15 @@ function eulerOne(){
 		};
 	}
 	console.log("The result is: " + result);
-	return result;
+	//return result;
+	document.getElementById("answer1").value = result;
+}
+
+function eulerTwo(){
+	//sum of all even valued fibonacci number with a value that doesn't exceed four mill.
+	var result = 0;
+
+	
+	
+	document.getElementById("answer2").value = result;
 }
