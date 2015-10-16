@@ -1,3 +1,8 @@
+var app = angular.module('eulersolutions',[]);
+app.controller('eulersolutionsCtrl',
+	function($scope){
+		$scope.message = "Angular is pretty awesome!";
+	});
 function eulerOne(){
 	//multiples of 3 or 5 in range [0..1000]
 	var x = new Date();
