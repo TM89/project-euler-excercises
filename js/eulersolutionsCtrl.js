@@ -53,7 +53,38 @@ app.controller('eulersolutionsCtrl',
 			},
 			"answer": "",
 			"time": ""
-		}
+			},
+			{
+				"nr":3,
+				"solution": function(){
+					//Find the largest prime factor of 600851475143
+					var origNr = 600851475143;
+					var remainder = 0;
+					var sqrtOfRemainder = 0;
+					var primes = [];
+					var hasRemainder = true;
+					var counter = 2;
+					var finished = false;
+					while (!finished) {
+						if (primes.length > 0){
+
+						} else {
+							while (hasRemainder) {
+								if (isPrime(counter)){
+									//push prime to primes-array if not exist
+									if(remainder%counter==0){
+										//counter is a prime factor of the number
+										remainder = remainder / counter;
+										sqrtOfRemainder = Math.sqrt(remainder);
+									} // if
+								} // if
+							} // while
+						} // if .. else
+					} // while
+				},
+				"answer": "",
+				"time": ""
+			}
 		];
 		$scope.executeSolution = function(solution){
 
