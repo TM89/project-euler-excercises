@@ -59,8 +59,8 @@ app.controller('eulersolutionsCtrl',
 				"solution": function(){
 					//Find the largest prime factor of 600851475143
 					var origNr = 600851475143;
-					var remainder = 0;
-					var sqrtOfRemainder = 0;
+					var remainder = origNr;
+					var sqrtOfRemainder = Math.sqrt(origNr);
 					var primes = [];
 					var hasRemainder = true;
 					var counter = 2;
