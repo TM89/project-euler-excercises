@@ -22,10 +22,8 @@ app.controller('eulersolutionsCtrl',
 						isMultiple = false;
 					};
 				}
-				console.log("The result is: " + result);
-				//return result;
-				document.getElementById("answer1").value = result;
-				document.getElementById("time1").value = new Date() - x;
+				this.time = new Date() - x + "ms";
+				this.answer = result;
 			},
 			"answer": "",
 			"time": ""
@@ -47,9 +45,8 @@ app.controller('eulersolutionsCtrl',
 					nrOne = nrTwo;
 					nrTwo = number;
 				}
+				this.time = new Date() - x + "ms";
 				this.answer = result;
-				document.getElementById("time2").value = new Date() - x;
-				document.getElementById("answer2").value = result;	
 			},
 			"answer": "",
 			"time": ""
