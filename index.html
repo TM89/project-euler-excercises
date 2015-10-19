@@ -14,41 +14,12 @@
 				<table>
 					<tr ng-repeat="x in solutions">
 						<td>{{ x.nr }}</td>
-						<td><input type="submit" ng-onclick="{{ x.solution }}"></td>
-						<td><input type="text" ng
+						<td><input type="submit" ng-click="x.solution()"></td>
+						<td><input type="text" ng-model="x.answer"></td>
+						<td><input type="text" ng-model="x.time"></td>
 					</tr>
 				</table>
 			</div>
-			<table>
-				<tr>
-					<td>
-						<h3>1</h3>
-					</td>
-					<td>
-						<input type="submit" onClick="eulerOne()" value="Solution 1">
-					</td>
-					<td>
-						<input type="text" id="answer1">
-					</td>
-					<td>
-						<input type="text" id="time1">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3>2</h3>
-					</td>
-					<td>
-						<input type="submit" onClick="eulerTwo()" value="Solution 2">
-					</td>
-					<td>
-						<input type="text" id="answer2">
-					</td>
-					<td>
-						<input type="text" id="time2">
-					</td>
-				</tr>
-			</table>
 		</div>
 	</body>
 </html>
