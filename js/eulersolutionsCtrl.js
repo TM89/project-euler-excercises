@@ -67,7 +67,7 @@ app.controller('eulersolutionsCtrl',
 
                                                 } else {
                                                         while (hasRemainder) {
-                                                                if (isPrime(counter)){
+                                                                if ($scope.isPrime(counter)){
                                                                         //push prime to primes-array if not exist
                                                                         if(remainder%counter==0){
                                                                                 //counter is a prime factor of the number
