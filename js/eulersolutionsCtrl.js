@@ -4,6 +4,10 @@ app.controller('eulersolutionsCtrl',
                 $scope.solutions = [
                         {"nr":1,
                         "solution": function(){
+                                if(!this.implemented){
+                                  $scope.notImplemented();
+                                  break;
+                                }
                                 //multiples of 3 or 5 in range [0..1000]
                                 var x = new Date();
                                 var result = 0;
@@ -26,7 +30,8 @@ app.controller('eulersolutionsCtrl',
                                 this.answer = result;
                         },
                         "answer": "",
-                        "time": ""
+                        "time": "",
+                        "implemented": true
                         },
                         {"nr":2,
                         "solution": function(){
@@ -49,7 +54,8 @@ app.controller('eulersolutionsCtrl',
                                 this.answer = result;
                         },
                         "answer": "",
-                        "time": ""
+                        "time": "",
+                        "implemented": true
                         },
                         {
                                 "nr":3,
@@ -80,7 +86,8 @@ app.controller('eulersolutionsCtrl',
                                         } // while
                                 },
                                 "answer": "",
-                                "time": ""
+                                "time": "",
+                                "implemented": false
                         },
                {
                  "nr":4,
@@ -105,11 +112,15 @@ app.controller('eulersolutionsCtrl',
                 this.time = new Date() - x + "ms"
               },
                "answer":"",
-               "time":""
+               "time":"",
+               "implemented": true
               }
                 ];
                 $scope.executeSolution = function(solution){
 
+                };
+                $scope.notImplemented = function(){
+                  alert("This method is not implemented yet!");
                 };
                 $scope.isPrime = function(n) {
                         if (isNaN(n) || !isFinite(n) || n%1 || n<2) return false;
