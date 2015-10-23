@@ -94,7 +94,7 @@ app.controller('eulersolutionsCtrl',
                    for(y=999;y>99;y--){
                      product = x*y;
                      text = product+"";
-                     if(text == text.split('').reverse().join()){
+                     if(text == text.split('').reverse().join('')){
                        if(product > palindrome){
                          palindrome = product;
                       }
