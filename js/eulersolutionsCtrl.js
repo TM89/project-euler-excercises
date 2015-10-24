@@ -4,10 +4,7 @@ app.controller('eulersolutionsCtrl',
                 $scope.solutions = [
                         {"nr":1,
                         "solution": function(){
-                                if(!this.implemented){
-                                  $scope.notImplemented();
-                                  break;
-                                }
+                                if(this.implemented){
                                 //multiples of 3 or 5 in range [0..1000]
                                 var x = new Date();
                                 var result = 0;
@@ -28,6 +25,9 @@ app.controller('eulersolutionsCtrl',
                                 }
                                 this.time = new Date() - x + "ms";
                                 this.answer = result;
+                                } else {
+                                  $scope.notImplemented();
+                                }
                         },
                         "answer": "",
                         "time": "",
@@ -35,6 +35,7 @@ app.controller('eulersolutionsCtrl',
                         },
                         {"nr":2,
                         "solution": function(){
+                                if(this.implemented){
                                 //sum of all even valued fibonacci number with a value that doesn't exceed four mill.
                                 var x = new Date();
                                 var result = 0;
@@ -52,6 +53,9 @@ app.controller('eulersolutionsCtrl',
                                 }
                                 this.time = new Date() - x + "ms";
                                 this.answer = result;
+                                } else {
+                                  $scope.notImplemented();
+                                }
                         },
                         "answer": "",
                         "time": "",
@@ -60,6 +64,7 @@ app.controller('eulersolutionsCtrl',
                         {
                                 "nr":3,
                                 "solution": function(){
+                                    if(this.implemented){
                                         //Find the largest prime factor of 600851475143
                                         var origNr = 600851475143;
                                         var remainder = origNr;
@@ -84,6 +89,9 @@ app.controller('eulersolutionsCtrl',
                                                         } // while
                                                 } // if .. else
                                         } // while
+                                    } else {
+                                      $scope.notImplemented();
+                                    }
                                 },
                                 "answer": "",
                                 "time": "",
@@ -92,6 +100,7 @@ app.controller('eulersolutionsCtrl',
                {
                  "nr":4,
                "solution": function(){
+                 if(this.implemented){
                  var x = new Date();
                  var product;
                  var palindrome = 0;
@@ -110,6 +119,9 @@ app.controller('eulersolutionsCtrl',
                 }
                 this.answer = palindrome;
                 this.time = new Date() - x + "ms"
+                 } else {
+                   $scope.notImplemented();
+                }
               },
                "answer":"",
                "time":"",
