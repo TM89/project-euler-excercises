@@ -126,6 +126,16 @@ app.controller('eulersolutionsCtrl',
                "answer":"",
                "time":"",
                "implemented": true
+              },
+               {
+                 "nr":6,
+               "solution": function(){
+                 if(this.implemented){
+                   
+                } else {
+                  $scope.notImplemented();
+                }
+              }
               }
                 ];
                 $scope.executeSolution = function(solution){
