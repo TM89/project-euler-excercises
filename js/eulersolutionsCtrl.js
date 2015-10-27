@@ -131,11 +131,27 @@ app.controller('eulersolutionsCtrl',
                  "nr":6,
                "solution": function(){
                  if(this.implemented){
+                   var x = new Date();
+                   var sumOfSquares = 0;
+                   var squareOfSum = 0;
+                   var sumOfNumbers = 0;
                    
+                   for(var i = 1; i < 100; i++){
+                     sumOfSquares = i * i;
+                     sumOfNumbers += i;
+                  }
+                  
+                  squareOfSum = sumOfNumbers^2;
+                  
+                  this.answer = sumOfSquares - squareOfSum;
+                  this.time = new Date() - x + "ms";
                 } else {
                   $scope.notImplemented();
                 }
-              }
+              },
+               "answer":0,
+               "time":0,
+               "implemented": true
               }
                 ];
                 $scope.executeSolution = function(solution){
